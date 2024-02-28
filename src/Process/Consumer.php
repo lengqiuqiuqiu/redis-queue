@@ -66,6 +66,7 @@ class Consumer
                     $consumer = Container::get($class);
                     $connection_name = $consumer->connection ?? 'default';
                     $queue = $consumer->queue;
+                    
                     if (!$queue) {
                         echo "Consumer {$class} queue not exists\r\n";
                         continue;
